@@ -28,7 +28,7 @@ taskManageForm.onsubmit = (event)=>{
 const {taskDescription} = taskManageForm;
 const taskList = document.getElementById('list');
 
-taskList.onclick = deleteTask;
+taskList.onclick = handleTask;
 
 
 function createCol(colSize) {
@@ -68,7 +68,7 @@ function addTask(taskContent) {
     taskRow.append(contentCol,manageCol);
     return taskRow
 }
-function deleteTask (event){
+function handleTask (event){
     const targetTask = event.target;
     switch (targetTask.name) {
         case "deleteTask":
